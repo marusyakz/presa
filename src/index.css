@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#triangle {
+    position: relative;
+    width: 200px;
+    height: 173.2px;
+    margin: 50px auto;
+}
+
+#dot {
+    position: absolute;
+    top: 116px;
+    left: 100px;
+    z-index: 1;
+    width: 2px;
+    height: 2px;
+    margin: -1px 0 0 -1px;
+    background: #000;
+}
+
+#spin-me {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 173.2px;
+    transform: rotate(0deg);
+    transform-origin: 100px 115.6666px;
+    -webkit-transform-origin: 100px 115.6666px;
+    animation: spin 6s 2s infinite;
+    -webkit-animation: spin 6s 2s infinite;
+}
+
+#triangle-one {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 100px 173.2px 100px;
+    border-color: transparent transparent #ddd transparent;
+    opacity: .1;
+}
+
+.circle {
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+
+    line-height: 60px;
+    text-align: center;
+ border-style: solid;
+    border-radius: 50%;
+  
+
+    animation: counter-spin 6s 2s infinite;
+    -webkit-animation: counter-spin 6s 2s infinite;
+}
+
+#one {
+    top: 0;
+    left: 50%;
+    margin: 0 0 0 -30px;
+}
+
+#two {
+    bottom: -15px;
+    left: -5px;
+}
+
+#three {
+    bottom: -15px;
+    right: -5px;
+}
+
+#triangle-two {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 173.2px;
+    height: 173.2px;
+    margin: -60px 0 0 -86.6px;
+    
+    border-radius: 50%;
+
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    33% {
+        transform: rotate(-120deg)
+    }
+
+    66% {
+        transform: rotate(-240deg)
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    33% {
+        -webkit-transform: rotate(-120deg)
+    }
+
+    66% {
+        -webkit-transform: rotate(-240deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@keyframes counter-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    33% {
+        transform: rotate(120deg)
+    }
+
+    66% {
+        transform: rotate(240deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes counter-spin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    33% {
+        -webkit-transform: rotate(120deg)
+    }
+
+    66% {
+        -webkit-transform: rotate(240deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
